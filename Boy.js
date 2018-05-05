@@ -5,7 +5,7 @@ import {
     StyleSheet,
 }from 'react-native';
 import Girl from './Girl';
-import NavigationBar from './NavigationBar';
+import NavigationBar from './js/common/NavigationBar';
 export default class Boy extends React.Component{
     constructor(props){
         super(props);
@@ -24,11 +24,10 @@ export default class Boy extends React.Component{
         return (
             <View style={styles.container}>
                 <NavigationBar
-                    title={'boy'}
+                    title='boy'
                     statusBar={
                         {
                             backgroundColor:'red',
-                            
                         }
                     }
                 />

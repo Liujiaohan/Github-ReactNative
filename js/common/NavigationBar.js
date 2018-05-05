@@ -1,4 +1,4 @@
-import React,{Component,propTypes} from 'react'
+import React,{Component} from 'react'
 import{
     View,
     Text,
@@ -7,6 +7,8 @@ import{
     StatusBar,
     StyleSheet,
 } from 'react-native'
+
+import PropTypes from 'prop-types'
 
 const NAVBAR_HEIGHT_ANDROID=50;
 const NAVBAR_HEIGHT_IOS=44;
@@ -19,26 +21,26 @@ const StatusBarShape={
 
 export default class NavigationBar extends Component{
     static propTypes={
-        style:View.propTypes.style,
+        style:PropTypes.style,
         title:PropTypes.string,
         titleView:PropTypes.element,
         hide:PropTypes.bool,
         leftButton:PropTypes.element,
-        rightButton:ProTypes.element,
+        rightButton:PropTypes.element,
         statusBar:PropTypes.shape(StatusBarShape)
     }
 
     static defaultProps={
         statusBar:{
            barStyle:'light-content',
-           hidden:'false'
+           hidden:false
         }
     }
     constructor(props){
         super(props);
         this.state={
             title:'',
-            hide:false
+            hidden:false
         }
     }
 
@@ -56,7 +58,7 @@ export default class NavigationBar extends Component{
             {this.props.rightButton}
         </View>
         return(
-            <View style={styles.container}>
+            <View style={[styles.container,this.props.style]}>
                 {status}
                 {content}
             </View>
