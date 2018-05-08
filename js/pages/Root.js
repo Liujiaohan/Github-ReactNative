@@ -6,7 +6,8 @@ import{
 } from 'react-native'
 
 import { Navigator } from 'react-native-deprecated-custom-components'
-import WelcomePage from'./Welcome'
+import WelcomePage from'./Welcome';
+import HomePage from './HomePage';
 
 //function setup(){
     // initialize
@@ -19,12 +20,8 @@ import WelcomePage from'./Welcome'
 
         render(){
             return <Navigator 
-                initialRoute={{component:WelcomePage}}
+                initialRoute={{component:HomePage}}
                 renderScene={(route,navigator)=>this.renderScene(route,navigator)}
             />
         }
     }
-    //return <Root/>
-//}
-
-//module.exports=setup;

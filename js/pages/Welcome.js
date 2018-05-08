@@ -14,7 +14,7 @@ export default class WelcomePage extends Component{
         this.timer=setTimeout(()=>{
             this.props.navigator.resetTo({
                 component:HomePage
-            },4000)
+            },2000)
         })
     }
 

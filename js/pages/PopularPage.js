@@ -49,7 +49,8 @@ export default class PopularPage extends Component{
         <View style={styles.container}>
             <NavigationBar
                 title={'最热'}/>
-            <ScrollableTabView renderTabBar={()=><DefaultTabBar someProp={'here'}/>}>
+            <ScrollableTabView 
+                renderTabBar={()=><DefaultTabBar someProp={'here'}/>}>
                 <PopularTab tabLabel="Java"/>
                 <PopularTab tabLabel="iOS"/>
                 <PopularTab tabLabel="Android"/>
